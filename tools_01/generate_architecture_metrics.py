@@ -21,7 +21,7 @@ for r in rows:
     elif path.startswith('services/'): key='/'.join(path.split('/')[:2])
     else: continue
     families.setdefault(key,[]).append(r)
-summary={'version':'V5.1.3.26','generated':'2026-08-08','totalFiles':len(rows),'totalLines':sum(r['lines'] for r in rows),'critical':sum(r['risk']=='critical' for r in rows),'high':sum(r['risk']=='high' for r in rows),'medium':sum(r['risk']=='medium' for r in rows),'runtimeShowcaseCount':sum(r['path'].startswith('runtime/showcase/runtime-v') for r in rows)}
+summary={'version':'V5.1.3.27','generated':'2026-08-08','totalFiles':len(rows),'totalLines':sum(r['lines'] for r in rows),'critical':sum(r['risk']=='critical' for r in rows),'high':sum(r['risk']=='high' for r in rows),'medium':sum(r['risk']=='medium' for r in rows),'runtimeShowcaseCount':sum(r['path'].startswith('runtime/showcase/runtime-v') for r in rows)}
 recommendations=[
  {'priority':1,'area':'runtime/showcase','title':'3D 主 Runtime 拆分','reason':'單檔超過 11,000 行，且同目錄保留大量歷史 runtime 版本。','target':'scene / device / interaction / wiring / simulation / overlay'},
  {'priority':2,'area':'simulation','title':'接線與連動引擎獨立','reason':'DI/DO、Relay、Timer、設備動作互相耦合時最容易造成回歸。','target':'signal-bus / wiring-engine / timer-engine / simulation-clock'},
