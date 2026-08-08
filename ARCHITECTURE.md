@@ -1,6 +1,6 @@
 # UTOP-3D Architecture
 
-版本：V5.1.3.26
+版本：V5.1.3.27
 
 本版新增「模組分工與隔離藍圖」，建立公開 Contract、Service Container、Facade 規劃與跨模組禁止規則。
 
