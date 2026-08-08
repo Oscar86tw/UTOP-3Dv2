@@ -1,21 +1,21 @@
-import { APP_CONFIG } from '../config/app-config.js?v=5.1.3.19-needle-ball-20260806';
+import { APP_CONFIG } from '../config/app-config.js?v=5.1.3.20-needle-ball-20260807';
 
 const STAGES = Object.freeze([
   {
     name: '背景工程診斷中心',
-    url: '../services/debug-center/debug-center-v4010.js?v=5.1.3.19-needle-ball-20260806'
+    url: '../services/debug-center/debug-center-v4010.js?v=5.1.3.20-needle-ball-20260807'
   },
   {
     name: '3D與設備核心',
-    url: '../runtime/showcase/runtime-v5100-workspace-final.js?v=5.1.3.19-needle-ball-20260806'
+    url: '../runtime/showcase/runtime-v5100-workspace-final.js?v=5.1.3.20-needle-ball-20260807'
   },
   {
     name: 'Foundation健康檢查',
-    url: '../runtime/foundation/foundation-health-v2400.js?v=5.1.3.19-needle-ball-20260806'
+    url: '../runtime/foundation/foundation-health-v2400.js?v=5.1.3.20-needle-ball-20260807'
   },
   {
     name: 'Google雲端橋接',
-    url: '../services/cloud-storage/cloud-save-v4330.js?v=5.1.3.19-needle-ball-20260806'
+    url: '../services/cloud-storage/cloud-save-v4330.js?v=5.1.3.20-needle-ball-20260807'
   }
 ]);
 
@@ -36,7 +36,7 @@ async function importStage(stage) {
 
 async function startShowcase() {
   document.documentElement.dataset.utopBoot = 'loading';
-  updateStatus('V5.1.3.19 3D針球狀 V3 啟動中…');
+  updateStatus('V5.1.3.24 模組庫專業設備圖升級 啟動中…');
 
   for (const stage of STAGES) {
     await importStage(stage);
@@ -53,7 +53,7 @@ async function startShowcase() {
 
   document.title = `${APP_CONFIG.appName} V${APP_CONFIG.version}`;
   document.documentElement.dataset.utopBoot = 'ready';
-  updateStatus('V5.1.3.19 3D針球狀 V3 系統準備就緒');
+  updateStatus('V5.1.3.24 模組庫專業設備圖升級 系統準備就緒');
 
   window.UTOP_APP = Object.freeze({
     config: APP_CONFIG,
@@ -66,7 +66,7 @@ startShowcase().catch((error) => {
   if (window.__UTOP_IS_IGNORABLE_ERROR__?.(error)) {
     window.__UTOP_HIDE_BOOT_ERROR__?.();
     document.documentElement.dataset.utopBoot = 'ready';
-    updateStatus('V5.1.3.19 3D針球狀 V3 系統準備就緒');
+    updateStatus('V5.1.3.24 模組庫專業設備圖升級 系統準備就緒');
     return;
   }
 

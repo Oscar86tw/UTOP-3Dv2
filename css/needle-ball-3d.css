@@ -10,7 +10,15 @@ button,input{font:inherit}button{min-height:40px;border:1px solid #36536d;border
 @media(max-width:820px){.nb-toolbar button{min-height:46px;white-space:nowrap}.nb-pointer{width:26px;height:26px}.nb-help{bottom:8px}}
 
 
-/* V5.1.3.19 3D針球狀第三階段 */
+/* V5.1.3.20 3D針球狀第三階段 */
 .nb-group-label{color:#fff7c2;background:#26334eee;border:1px solid #ffd166;border-radius:999px;padding:6px 12px;font-size:14px;font-weight:800;white-space:nowrap;box-shadow:0 5px 18px #0008;pointer-events:none}
 #circuitFocusBtn.is-active,#groupLabelsBtn.is-active{border-color:#ffd166;background:#3d371f}
 @media(max-width:820px){.nb-group-label{font-size:12px;padding:5px 9px}.nb-toolbar{scroll-snap-type:x proximity}.nb-toolbar button{scroll-snap-align:start}}
+
+/* V5.1.3.20 模組庫專業設備圖升級 */
+.nb-label{font-size:14px;font-weight:800;padding:5px 9px;box-shadow:0 5px 16px #000a}
+.nb-port-label{font-size:11px;font-weight:700;padding:3px 6px;box-shadow:0 4px 12px #0009}
+.nb-help{max-width:min(760px,calc(100% - 28px));line-height:1.45}
+.nb-stage canvas{position:absolute;inset:0}
+.nb-stage #mount>div{position:absolute!important;inset:0!important}
+@media(max-width:820px){.nb-label{font-size:12px}.nb-port-label{font-size:10px}.nb-help{max-height:52px;overflow:hidden}}
