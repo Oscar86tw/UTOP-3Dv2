@@ -1,4 +1,4 @@
-// UTOP V5.1.3.5 模組圖片對應機制
+// UTOP V5.1.3.24 模組庫專業設備圖｜依官方產品外觀重新繪製
 const MODULE_IMAGE_MAP = Object.freeze({
   'PARKING-BARRIER-001': './assets/module-images/parking-barrier-001.svg',
   'PARKING-LIGHT-001': './assets/module-images/parking-light-001.svg',
